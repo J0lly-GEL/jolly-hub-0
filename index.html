@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <title>JØLLY HUB Ø</title>
+    <style>
+        :root {
+            --neon-blue: #00d4ff; /* Ciano Principale */
+            --neon-green: #00ff00; /* Verde Neon Pulsante */
+            --bg-dark: #0a0a0a;
+        }
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace; /* Font Meccanico */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        .container {
+            border: 2px solid var(--neon-blue);
+            padding: 40px 20px;
+            border-radius: 40px;
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.2);
+            max-width: 360px;
+            width: 85%;
+            background: #0a0a0a;
+        }
+        h1 {
+            color: var(--neon-blue);
+            font-size: 3rem;
+            letter-spacing: 10px;
+            margin: 0;
+            font-weight: 900;
+        }
+        .subtitle {
+            color: #444; /* Fi-Sister color */
+            font-size: 0.8rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .btn-deploy {
+            display: block;
+            background: var(--neon-green);
+            color: #000;
+            padding: 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.4rem;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+            animation: pulse-green 1.8s infinite;
+            transition: transform 0.2s;
+        }
+        @keyframes pulse-green {
+            0% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 255, 0, 0.4); }
+            50% { transform: scale(1.04); box-shadow: 0 0 40px rgba(0, 255, 0, 0.9); }
+            100% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 255, 0, 0.4); }
+        }
+        .btn-deploy:active { transform: scale(0.95); }
+        #status-msg {
+            font-size: 0.6rem;
+            color: #222;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JØLLY</h1>
+        <p class="subtitle">Ø-1.5 PROTOCOLLO</p>
+        <button id="installBtn" class="btn-deploy">SCARICA Ø HUB</button>
+        <p id="status-msg">CERTIFICA</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

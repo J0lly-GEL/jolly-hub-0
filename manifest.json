@@ -1,0 +1,24 @@
+{
+  "short_name": "JØLLY HUB",
+  "name": "JØLLY G.E.L. PROTOCOLLO Ø",
+  "icons": [
+    {
+      "src": "https://api.qrserver.com/v1/create-qr-code/?size=192x192&data=JOLLY-0&color=00d4ff&bgcolor=000000",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=J0lly-0&color=00d4ff&bgcolor=000000",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "./",
+  "theme_color": "#000000"
+}
