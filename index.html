@@ -8,14 +8,14 @@
     <title>JØLLY HUB Ø</title>
     <style>
         :root {
-            --neon-blue: #00d4ff; /* Ciano Principale */
-            --neon-green: #00ff00; /* Verde Neon Pulsante */
+            --neon-blue: #00d4ff;
+            --neon-green: #00ff00;
             --bg-dark: #0a0a0a;
         }
         body {
             background-color: #000;
             color: #fff;
-            font-family: 'Courier New', monospace; /* Font Meccanico */
+            font-family: 'Courier New', monospace;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -41,32 +41,39 @@
             font-weight: 900;
         }
         .subtitle {
-            color: #444; /* Fi-Sister color */
+            color: #444;
             font-size: 0.8rem;
             margin-bottom: 40px;
             text-transform: uppercase;
         }
         .btn-deploy {
             display: block;
-            background: var(--neon-green);
             color: #000;
             padding: 25px;
             border-radius: 20px;
             text-decoration: none;
             font-weight: 900;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             border: none;
             width: 100%;
             cursor: pointer;
             text-transform: uppercase;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
-            animation: pulse-green 1.8s infinite;
             transition: transform 0.2s;
         }
-        @keyframes pulse-green {
-            0% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 255, 0, 0.4); }
-            50% { transform: scale(1.04); box-shadow: 0 0 40px rgba(0, 255, 0, 0.9); }
-            100% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 255, 0, 0.4); }
+        .btn-blue {
+            background: var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+            margin-bottom: 20px;
+            animation: pulse-blue 1.8s infinite;
+        }
+        .btn-red {
+            background: #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+        @keyframes pulse-blue {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+            100% { transform: scale(1); }
         }
         .btn-deploy:active { transform: scale(0.95); }
         #status-msg {
@@ -80,10 +87,10 @@
     <div class="container">
         <h1>JØLLY</h1>
         <p class="subtitle">Ø-1.5 PROTOCOLLO</p>
-        <button id="installBtn" class="btn-deploy">SCARICA Ø HUB</button>
+        <button id="callBtn" class="btn-deploy btn-blue">EMERGENZA ELISA</button>
+        <button id="apBtn" class="btn-deploy btn-red">CONSULENZA J0LLY</button>
         <p id="status-msg">CERTIFICA</p>
     </div>
     <script src="main.js"></script>
 </body>
 </html>
- 
