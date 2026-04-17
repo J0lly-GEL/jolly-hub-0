@@ -1,11 +1,14 @@
-self.addEventListener('install', (e) => {
-    self.skipWaiting();
-});
+const CACHE_NAME = 'jolly-cache-v1';
+const assets = ['./', './index.html', './main.js', './style.css'];
 
-self.addEventListener('activate', (e) => {
-    return self.clients.claim();
+self.addEventListener('install', (e) => {
+    e.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => cache.addAll(assets))
+    );
 });
 
 self.addEventListener('fetch', (e) => {
-    e.respondWith(fetch(e.request));
+    e.respondWith(
+        caches.match(e.request).then((res) => res || fetch(e.request))
+    );
 });
