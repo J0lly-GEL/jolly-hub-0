@@ -9,8 +9,7 @@
     <style>
         :root {
             --neon-blue: #00d4ff;
-            --neon-green: #00ff00;
-            --bg-dark: #0a0a0a;
+            --neon-red: #ff0000;
         }
         body {
             background-color: #000;
@@ -64,16 +63,10 @@
             background: var(--neon-blue);
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
             margin-bottom: 20px;
-            animation: pulse-blue 1.8s infinite;
         }
         .btn-red {
-            background: #ff0000;
+            background: var(--neon-red);
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-        }
-        @keyframes pulse-blue {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.04); }
-            100% { transform: scale(1); }
         }
         .btn-deploy:active { transform: scale(0.95); }
         #status-msg {
